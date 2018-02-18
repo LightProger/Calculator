@@ -19,14 +19,14 @@
 int main() {
     char c;
     double a, b;
-    scanf(" %c %lf %lf", &c, &a, &b);
+    scanf(" %lf %lf %c", &a, &b, &c);
 
     switch (c)
     {
         case '+': printf("%.2lf", a + b); break;
         case '-': printf("%.2lf", a - b); break;
         case '*': printf("%.2lf", a * b); break;
-        case '/': printf("%.2lf", a / b); break;
+        case '/' : printf(b ? "%.2f\n" : "ERROR!\n", a / b); break;
         default: printf("ERROR!"); break;
     }
     return 0;
